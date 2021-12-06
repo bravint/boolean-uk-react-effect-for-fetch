@@ -10,7 +10,7 @@ In the sections folder you will find three sections to complete for this exercis
 
 You have `Art`, `Users` and `Advice`.
 
-The aim of the exercise is to practice fetching data nad rendering lists.
+The aim of the exercise is to practice fetching data and rendering lists.
 
 Inside each section folder you will find:
 
