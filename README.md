@@ -14,7 +14,7 @@ The aim of the exercise is to practice fetching data and rendering lists.
 
 Inside each section folder you will find:
 
-- a `index.js` file for the logic of each section **build everything here and then break it down into components**
+- an `index.js` file for the logic of each section **build everything here and then break it down into components**
 - a `template.html` that shows you an example of what your React components should create. Take note of `className` to get the styling working.
 - a `components` folder with suggested components to create so you can practice props.
 
@@ -54,4 +54,4 @@ The `Advice` slip section should render:
 The `Advice` slip section should allow users to:
 
 - Fetch another advice slip using a button
-- Save and advice slip to favourites using a button
+- Save an advice slip to favourites using a button
