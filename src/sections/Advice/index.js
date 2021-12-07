@@ -9,9 +9,7 @@ function AdviceSection() {
     const [favourite, setFavourite] = useState([]);
 
     const addFavourite = (advice) => {
-        let Array = [...favourite];
-        Array.push(advice.slip.advice);
-        setFavourite(Array);
+        setFavourite([...favourite, advice.slip.advice]);
     };
 
     useEffect(() => {
