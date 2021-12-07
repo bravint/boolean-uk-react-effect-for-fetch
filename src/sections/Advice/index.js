@@ -8,13 +8,20 @@ function AdviceSection() {
     const [trigger, setTrigger] = useState(true);
     const [favourite, setFavourite] = useState([]);
 
-    const addFavourite = (advice) => setFavourite([...favourite, advice.slip.advice]);
+    const addFavourite = (advice) =>
+        setFavourite([...favourite, advice.slip.advice]);
 
     useEffect(() => {
         const fetchAdvice = async () => {
-            const response = await fetch("https://api.adviceslip.com/advice");
-            const data = await response.json();
-            setAdvice(data);
+            try {
+                const response = await fetch(
+                    "https://api.adviceslip.com/advice"
+                );
+                const data = await response.json();
+                setAdvice(data);
+            } catch (error) {
+                console.log(error);
+            }
         };
         fetchAdvice();
     }, [trigger]);

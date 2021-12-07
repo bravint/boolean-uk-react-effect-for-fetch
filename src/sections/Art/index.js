@@ -7,12 +7,16 @@ function ArtsSection() {
 
     useEffect(() => {
         const fetchArt = async () => {
-            const response = await fetch(
-                "https://api.artic.edu/api/v1/artworks/search?query[term][is_public_domain]=true&limit=12&fields=id,title,artist_title,image_id,subject_titles"
-            );
-            const data = await response.json();
-            const fetchedArts = filterFetchedData(data);
-            setArts(fetchedArts);
+            try {
+                const response = await fetch(
+                    "https://api.artic.edu/api/v1/artworks/search?query[term][is_public_domain]=true&limit=12&fields=id,title,artist_title,image_id,subject_titles"
+                );
+                const data = await response.json();
+                const fetchedArts = filterFetchedData(data);
+                setArts(fetchedArts);
+            } catch (error) {
+                console.log(error);
+            }
         };
         fetchArt();
     }, []);
