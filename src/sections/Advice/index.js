@@ -8,9 +8,7 @@ function AdviceSection() {
     const [trigger, setTrigger] = useState(true);
     const [favourite, setFavourite] = useState([]);
 
-    const addFavourite = (advice) => {
-        setFavourite([...favourite, advice.slip.advice]);
-    };
+    const addFavourite = (advice) => setFavourite([...favourite, advice.slip.advice]);
 
     useEffect(() => {
         const fetchAdvice = async () => {
